@@ -1,0 +1,63 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+/*Mise en forme du footer*/
+
+footer {
+  width: 100%;
+  background-color: $dark-grey;
+  padding: 22px;
+  position: relative;
+
+  & h3 {
+    color: $text-white;
+    margin: 0 0 15px 10px;
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      justify-content: flex-end;
+      position: absolute;
+      top: 68px;
+      right: 32px;
+    }
+  }
+
+  & .footer-container {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 1024px) {
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-top: 50px;
+      margin-right: 200px;
+    }
+
+    & a {
+      @include text-font;
+      font-size: 1rem;
+      font-weight: 500;
+      color: $text-white;
+      margin: 8px 10px;
+      position: relative;
+
+      @media screen and (min-width: 1024px) {
+        margin: 0 10px;
+      }
+
+      i {
+        width: 22px;
+        font-size: 16px;
+      }
+
+      & i {
+        @media screen and (min-width: 1024px) {
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: 1440px;
+    margin: 0 auto;
+  }
+}
