@@ -1,0 +1,36 @@
+@import '../utils/variables';
+
+/*Animation des coeurs de la page index.html*/
+.cards {
+    .fa-solid {
+      color: transparent;
+      background-image: linear-gradient(to top, $secondary-color, $primary-color);
+      background-clip: text;
+      -webkit-background-clip: text;
+      opacity: 0;
+      transition: all 200ms ease-in-out;
+    }
+  
+    &:hover .fa-solid {
+      opacity: 1;
+      // transform: scale(1.02);
+    }
+  }
+  
+  /*Animation des coeurs des pages menus*/
+  
+  .menu-title-heart {
+    .fa-full {
+      color: transparent;
+      background-image: linear-gradient(to top, $secondary-color, $primary-color);
+      background-clip: text;
+      -webkit-background-clip: text;
+      opacity: 0;
+      transition: all 2000ms ease;
+    }
+  
+    &:hover .fa-solid {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
