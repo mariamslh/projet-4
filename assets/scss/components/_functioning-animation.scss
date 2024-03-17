@@ -1,0 +1,18 @@
+@import '../utils/variables';
+
+
+.functioning {
+  .all-steps {
+    .step {
+      .fa-solid {
+
+        -webkit-background-clip: text;
+        transition: all 200ms ease-in-out;
+      }
+
+      &:hover .fa-solid {
+        color: $primary-color;
+      }
+    }
+  }
+}

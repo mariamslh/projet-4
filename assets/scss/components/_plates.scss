@@ -1,0 +1,109 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.plate {
+  width: 95%;
+  background-color: $text-white;
+  border-radius: 15px;
+  display: flex;
+  gap: 5px;
+  @include menu-shadow;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    .plate-check {
+      transform: translateX(-62px);
+      transition: transform 750ms ease;
+
+      i {
+        transform: rotate(360deg);
+        transition: transform 1000ms ease;
+      }
+    }
+
+    .plate-price {
+      transform: translateX(-62px);
+      transition: transform 750ms ease;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &-title {
+    width: 255px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 9px;
+
+    h3 {
+      width: 80%;
+      color: $text-black;
+      @include text-font;
+      font-weight: 600;
+      font-size: 1rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      @media screen and (min-width: 1024px) {
+        width: 600px;
+        font-size: 1.3rem;
+      }
+    }
+
+    p {
+      width: 55%;
+      color: $text-black;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      @media screen and (min-width: 380px) {
+        overflow: visible;
+      }
+
+      @media screen and (min-width: 1024px) {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  &-price {
+    color: $text-black;
+    font-weight: 600;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    transform: translateX(0);
+    transition: transform 750ms ease;
+  }
+
+  &-check {
+    background-color: $tertiary-color;
+    min-width: 60px;
+    height: 77px;
+    /*Borders*/
+    border-radius: 0 15px 15px 0;
+    /*display*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*Position*/
+    position: absolute;
+    top: 0;
+    right: -62px;
+    transform: translateX(0);
+    transition: transform 750ms ease;
+
+    i {
+      color: $text-white;
+    }
+  }
+}

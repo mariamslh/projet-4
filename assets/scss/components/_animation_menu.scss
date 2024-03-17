@@ -1,0 +1,30 @@
+.entrees-anim {
+  opacity: 0;
+  animation: descend 1s ease forwards;
+}
+
+// /*Les plats*/
+.plats-anim {
+  opacity: 0;
+  animation: descend 1s ease forwards 400ms;
+}
+
+//   /*Les desserts*/
+.desserts-anim {
+  opacity: 0;
+  animation: descend 1s ease forwards 800ms;
+}
+
+@keyframes descend {
+  from {
+    transform: translateY(100px);
+    /* Commence en haut (en dehors de l'écran) */
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    /* Se termine en bas de l'écran */
+    opacity: 1;
+  }
+}
