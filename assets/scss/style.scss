@@ -1,0 +1,21 @@
+@charset "UTF-8";
+@import './bases/reset';
+@import './bases/typographie' ;
+@import './bases/bases' ;
+@import './layout/header';
+@import './layout/footer';
+@import './pages/home.scss' ;
+@import './pages/menu' ;
+@import './components/loader' ;
+@import './components/button' ;
+@import './components/cards' ;
+@import './components/badge' ;
+@import './components/plates' ;
+@import './components/animation_menu' ;
+@import './components/heart-animation' ;
+@import './components/functioning-animation';
+@import './utils/variables';
+@import './utils/mixins' ;
+
+
+
