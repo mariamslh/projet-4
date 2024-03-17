@@ -1,0 +1,101 @@
+@import '../utils/mixins' ;
+@import '../utils/variables' ;
+@import '../components/heart-animation' ;
+@import '../components/animation_menu' ;
+
+/*Suppression de l'ombre sur le header*/
+.menu-header {
+  box-shadow: none;
+}
+/*Mise en forme du menu*/
+
+.menu {
+  width: 90%;
+  background-color: $light-grey2;
+  border-radius: 20px 20px 0 0;
+  padding-bottom: 30px;
+  margin: 0 auto;
+
+  &-img {
+    margin-bottom: -62px;
+    z-index: -10;
+    position: relative;
+    img {
+      width: 100%;
+      height: 238px;
+      object-fit: cover;
+
+      @media screen and (min-width: 1024px) {
+        height: 530px;
+      }
+    }
+  }
+  &-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+
+    h1 {
+      @include title-font;
+      @media screen and (min-width: 1024px) {
+        font-size: 1.8rem;
+        
+      }
+    }
+
+    &-heart {
+      width: 70px;
+      position: relative;
+      .fa-full,
+      .fa-empty {
+        font-size: 2rem;
+        position: absolute;
+        top: -15px;
+        margin-left: 10px;
+      }
+
+      .heart-main {
+        top: 14px;
+        right: 10px;
+
+        @media screen and (min-width: 1024px) {
+
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+
+      }
+    }
+  }
+  &-plates {
+    padding: 0 5px;
+    opacity: 0;
+
+    h4 {
+      padding: 30px 0 30px 10px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 5px;
+        border-bottom: 5px solid $tertiary-color;
+        display: block;
+      }
+
+      @media screen and (min-width: 1024px) {
+        font-size: 1.3rem;
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+}

@@ -1,0 +1,141 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+@import '../components/heart-animation';
+
+/*Mise en page du container "location"*/
+.location {
+    width: 100%;
+    background-color: $light-grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    margin-top: 5px;
+  
+    & i {
+      font-size: 19px;
+    }
+  
+    & input {
+      width: 9rem;
+      @include text-font;
+      font-size: 1rem;
+      font-weight: 400;
+      text-align: center;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      background-color: $light-grey;
+    }
+  
+    & input:focus {
+      background-color: rgba(255, 255, 255, 0.4);
+      margin-left: 15px;
+    }
+  }
+  
+  /*Mise en page de la section "hero"*/
+  .hero {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    background-color: $light-grey2;
+    display: grid;
+    place-items: center;
+  
+    & h1 {
+      @media screen and (min-width: 1024px) {
+        font-size: 2.5rem;
+      }
+      
+    }
+  
+    & p {
+      @include text-font;
+      font-size: 1.12rem;
+      font-weight: 300;
+      text-align: center;
+      color: $dark-grey;
+      padding-top: 15px;
+    }
+  }
+  /*Mise en forme de la section "functioning"*/
+  .functioning {
+    width: 100%;
+    counter-reset: steps-functioning;
+    margin-bottom: 30px;
+  }
+  
+  .all-steps {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 1024px) {
+      flex-direction: row;
+      justify-content: center;
+      gap: 5%;
+    }
+  
+    & .step {
+      max-width: 82%;
+      height: 20px;
+      background-color: $light-grey2;
+      border-radius: 20px;
+      margin: 20px;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include shadow-button;
+      position: relative;
+    }
+    & div::before {
+      counter-increment: steps-functioning;
+      content: '' counter(steps-functioning);
+      width: 30px;
+      height: 30px;
+      background-color: $primary-color;
+      border-radius: 50%;
+      padding: 5px;
+      display: grid;
+      place-items: center;
+      @include text-font;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: $text-white;
+      position: absolute;
+      left: -14px;
+    }
+  
+    & i {
+      font-size: 20px;
+      color: darken($light-grey, 40%);
+      margin-right: 10px;
+    }
+  }
+  
+  /*Mise en forme de la section "restaurants"*/
+  .restaurants {
+    width: 100%;
+    background-color: $light-grey2;
+    padding-top: 10px;
+    padding-bottom: 45px;
+  
+    & .restaurants-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+  
+      @media screen and (min-width: 1024px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+      }
+    }
+  }
+
